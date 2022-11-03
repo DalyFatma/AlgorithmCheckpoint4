@@ -1,0 +1,17 @@
+ALGORITHM tri
+VAR
+ temp: INTEGER:=0;
+ i: INTEGER;
+ j: INTEGER;
+ arr: ARRAY_OF INTEGER[];
+BEGIN
+  FOR i FROM 1 TO arr.length STEP 1  DO
+    temp=arr[i];
+    j=i-1;
+    WHILE (temp<arr[i] and j>=0) DO
+        arr[j+1]=arr[j];
+        j--;
+    END_WHILE
+    temp=arr[j+1];
+  END_FOR 
+END
